@@ -9,6 +9,12 @@ class TestIterablesMethods(unittest.TestCase):
     def test_chain_iterables(self):
         self.assertEqual(list(chain_iterables([1, 2], [3])), [1, 2, 3])
 
+    def test_n_digit_suffix_generator(self):
+        self.assertIn('0000', n_digit_suffix_generator(4))
+        self.assertIn('8888', n_digit_suffix_generator(4))
+        self.assertIn('9999', n_digit_suffix_generator(4))
+        self.assertIn('0', n_digit_suffix_generator(1))
+
     # def test_split(self):
     #     s = 'hello world'
     #     self.assertEqual(s.split(), ['hello', 'world'])
