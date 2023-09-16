@@ -6,9 +6,8 @@ class TestIterablesMethods(unittest.TestCase):
     def test_get_element_by_batch_of(self):
         self.assertEqual(list(get_element_by_batch_of([1, 2, 3], 2)), [[1, 2], [3]])
 
-    # def test_isupper(self):
-    #     self.assertTrue('FOO'.isupper())
-    #     self.assertFalse('Foo'.isupper())
+    def test_chain_iterables(self):
+        self.assertEqual(list(chain_iterables([1, 2], [3])), [1, 2, 3])
 
     # def test_split(self):
     #     s = 'hello world'
