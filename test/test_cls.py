@@ -17,7 +17,7 @@ class TestDotDict(unittest.TestCase):
         self.assertEqual(a.age, 24)
         self.assertEqual(a.sports, ['Soccer'])
 
-    def test_dotdict_mested_dot_attr_access(self):
+    def test_dotdict_nested_dot_attr_access(self):
         d = DotDict({'a': {'b': {'c': 1}}})
         self.assertEqual(d.a.b.c, 1)
 
